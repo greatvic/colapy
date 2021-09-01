@@ -12,7 +12,7 @@ https://colab.research.google.com/drive/1rENrSVJtrFq05snK5xn2qAXubnLXPndD?usp=sh
 
 - 20210901課程
 
-
+https://colab.research.google.com/drive/19boFy2SxGa1CWECb8AO4WWjNTa1wwHpm?usp=sharing
 
 ## Python 簡介
 
