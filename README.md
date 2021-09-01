@@ -6,8 +6,13 @@
 
 https://colab.research.google.com/
 
-＃20210827課程
-- https://colab.research.google.com/drive/1rENrSVJtrFq05snK5xn2qAXubnLXPndD?usp=sharing
+- 20210827課程
+
+https://colab.research.google.com/drive/1rENrSVJtrFq05snK5xn2qAXubnLXPndD?usp=sharing
+
+- 20210901課程
+
+
 
 ## Python 簡介
 
