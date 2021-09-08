@@ -22,6 +22,10 @@ https://colab.research.google.com/drive/1QZhaRlH4_hCrLaLRm8cOErVlsgP_ZqVV?usp=sh
 
 https://colab.research.google.com/drive/1FA_w_y6p-51mY2gSlwgUw8s_4FzP9uRK?usp=sharing
 
+- 20210908課程
+
+https://colab.research.google.com/drive/1cl5-mHUreZnOZO3dSSumq6s0DcPhPaen?usp=sharing
+
 ## Python 簡介
 
 - Python 101 程式碼
