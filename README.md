@@ -31,3 +31,7 @@ https://colab.research.google.com/drive/1cl5-mHUreZnOZO3dSSumq6s0DcPhPaen?usp=sh
 - Python 101 程式碼
 
 https://github.com/ywchiu/pyfintech/blob/master/Python101.ipynb
+
+## SelectorGadget
+
+- https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=zh-TW
