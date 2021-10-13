@@ -30,6 +30,10 @@ https://colab.research.google.com/drive/1cl5-mHUreZnOZO3dSSumq6s0DcPhPaen?usp=sh
 
 https://colab.research.google.com/drive/1gkYMt_3NmP0ccm9lhjLCeqtYRUqcnfNW?usp=sharing
 
+- 20211013 課程
+
+https://colab.research.google.com/drive/1QeYOi3-C_OnLOsjkVmZp7zCYf6ToupwI?usp=sharing
+
 
 ## Python 簡介
 
