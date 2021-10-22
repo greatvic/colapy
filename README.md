@@ -42,6 +42,10 @@ https://colab.research.google.com/drive/1tvCNCs2KQjVUb5FlK-VjenCbz2y7STVQ?usp=sh
 
 https://colab.research.google.com/drive/1Lr0S9EYQlyh6r3jTyxCAqe6mWDZqyO0D?usp=sharing
 
+- 20211022 課程
+
+https://colab.research.google.com/drive/1lXFk92QWXjIFrS6gO-yALLiF1gHUMq3W?usp=sharing
+
 ## 補充教材
 
 - https://github.com/ywchiu/colapy/blob/main/slide/20211019%20Python%20%E7%B6%B2%E8%B7%AF%E7%88%AC%E8%9F%B2%E8%A3%9C%E5%85%85%E6%95%99%E6%9D%90(%E5%8F%AF%E6%A8%82)%20.pdf
