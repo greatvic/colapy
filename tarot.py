@@ -1,5 +1,6 @@
 from playwright.sync_api import Playwright, sync_playwright
-import time
+import time, random
+from bs4 import BeautifulSoup
 
 def run(playwright: Playwright) -> None:
     browser = playwright.webkit.launch(headless=False)
@@ -7,44 +8,21 @@ def run(playwright: Playwright) -> None:
 
     # Open new page
     page = context.new_page()
+    for i in range(10):
+        for c in range(1,6):
+            for s in range(0,3):
+                ary = []
+                for num in random.sample(range(1,79), 5):
+                    ary.append(str(num))
+                p = ','.join(ary)
 
-    # Go to https://gomedia.asia/zh/free_tarot/
-    page.goto("https://gomedia.asia/zh/free_tarot/")
+                # Go to https://gomedia.asia/zh/free_tarot/
+                page.goto("https://gomedia.asia/zh/%E7%84%A1%E7%89%8C%E9%99%A3%E5%A1%94%E7%BE%85%E5%8D%A0%E5%8D%9C%E8%A7%A3%E7%89%8C/?card={},&category={}&subitem={}".format(p, c, s))
 
-    # Select 財運
-    page.select_option("select[name=\"category\"]", "財運")
-
-    # Click input:has-text("洗牌")
-    page.click("input:has-text(\"洗牌\")")
-
-    # Press - with modifiers
-    page.press("text=Skip to content MENU 愛情占卜 運勢占卜 免費塔羅牌占卜 免費生命靈數占卜 免費易經圖解占卜 免費星座愛情占卜 最新消息 影音分享 溫柔畫字", "Meta+-")
-
-    # Press - with modifiers
-    page.press("text=Skip to content MENU 愛情占卜 運勢占卜 免費塔羅牌占卜 免費生命靈數占卜 免費易經圖解占卜 免費星座愛情占卜 最新消息 影音分享 溫柔畫字", "Meta+-")
-
-    # Click #cardProto81
-    page.click("#cardProto81")
-
-    # Click #cardProto80
-    page.click("#cardProto80")
-
-    # Click #cardProto79
-    page.click("#cardProto79")
-
-    # Click #cardProto78
-    page.click("#cardProto78")
-
-    # Click #cardProto77
-    page.click("#cardProto77")
-
-    # Click input:has-text("翻牌")
-    page.click("input:has-text(\"翻牌\")")
-
-    # Click input:has-text("解牌")
-    page.click("input:has-text(\"解牌\")")
-    time.sleep(10)
-    print(page.content())
+                time.sleep(1)
+                soup = BeautifulSoup(page.content(), 'lxml')
+                result = soup.select_one('.text-inner.text-left > h4').text
+                print(p,c,s,result)
     # assert page.url == "https://gomedia.asia/zh/%E7%84%A1%E7%89%8C%E9%99%A3%E5%A1%94%E7%BE%85%E5%8D%A0%E5%8D%9C%E8%A7%A3%E7%89%8C/?card=16,18,7,43,61,&category=5&subitem=0"
 
     # Close page
