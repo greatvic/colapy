@@ -1,6 +1,7 @@
 from playwright.sync_api import Playwright, sync_playwright
 import time, random
 from bs4 import BeautifulSoup
+import pandas
 
 def run(playwright: Playwright) -> None:
     browser = playwright.webkit.launch(headless=False)
@@ -8,9 +9,10 @@ def run(playwright: Playwright) -> None:
 
     # Open new page
     page = context.new_page()
-    for i in range(10):
-        for c in range(1,6):
-            for s in range(0,3):
+    allcomb = []
+    for i in range(3):
+        for c in range(1,3):
+            for s in range(0,2):
                 ary = []
                 for num in random.sample(range(1,79), 5):
                     ary.append(str(num))
@@ -22,7 +24,11 @@ def run(playwright: Playwright) -> None:
                 time.sleep(1)
                 soup = BeautifulSoup(page.content(), 'lxml')
                 result = soup.select_one('.text-inner.text-left > h4').text
-                print(p,c,s,result)
+                dic = {'cards':p, 'category': c,'subitem':s,'result':result}
+                print(dic)
+                allcomb.append(dic)
+    df = pandas.DataFrame(allcomb)
+    df.to_excel('tarot.xlsx')
     # assert page.url == "https://gomedia.asia/zh/%E7%84%A1%E7%89%8C%E9%99%A3%E5%A1%94%E7%BE%85%E5%8D%A0%E5%8D%9C%E8%A7%A3%E7%89%8C/?card=16,18,7,43,61,&category=5&subitem=0"
 
     # Close page
